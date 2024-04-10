@@ -1,5 +1,5 @@
 import comfy.options
-comfy.options.enable_args_parsing()
+# comfy.options.enable_args_parsing()
 
 import os
 import importlib.util
@@ -188,6 +188,7 @@ def load_extra_path_config(yaml_path):
 
 
 if __name__ == "__main__":
+    comfy.options.enable_args_parsing()
     if args.temp_directory:
         temp_dir = os.path.join(os.path.abspath(args.temp_directory), "temp")
         logging.info(f"Setting temp directory to: {temp_dir}")
